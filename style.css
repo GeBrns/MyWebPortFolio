@@ -8,7 +8,8 @@
 body{  
         margin: 0;
         padding: 0; 
-        background-color: #fafafa; 
+        background: rgb(37,46,57);
+background: linear-gradient(90deg, rgba(37,46,57,1) 88%, rgba(5,8,13,1) 100%, rgba(112,127,136,1) 100%);
         font-size: 20px;
         height: 100%;
         width: 100%;
@@ -67,9 +68,9 @@ button{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .container-2{
-    background-color: rgb(205, 227, 251);
+    
     max-width: 100vw;
-    height: 100vh;
+    height: 80vh;
 }
 
 .introduction{
@@ -85,18 +86,23 @@ button{
 
 .introPhoto{
   position: absolute;
-  top: 3vh;
+  top: 20vh;
   left: 50%;
 }
 
 .container-3{
+    
     margin-top: 16vh;
-    margin-left: 3.75vw;
     max-width: 100vw;
     height: 80vh;
 }
 
+.container-3 h1{
+    margin-left: 3.75vw;
+}
+
 .card-1{
+    margin-left: 3.75vw;
     position: relative;
     margin-top: 9.6vh;
     display:flex;
@@ -146,17 +152,18 @@ button{
 }
 
 .container-5{
+   
     display: flex;
-    margin-top: 16vh;
-    margin-left: 3.75vw;
+    margin-top: 10vh;
     max-width: 100vw;
     height: 80vh;
+    overflow-y:hidden ;
 }
 
 .aboutMe{
     position: relative;
     top: 5vh;
-    left: 7vw;
+    left: 6vw;
 }
 
 .aboutMe h5{
@@ -166,9 +173,8 @@ button{
 
 .aboutPhoto{
     position: absolute;
-    width: 40vw;
-    height: 80vh;
-    margin-top: 1vh;
-    margin-left: 50%;
-   
+    width: 30vw;
+    height: 60vh;
+    margin-top: 10vh;
+    margin-left: 60%;  
 }
