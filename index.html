@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" class="hideNav" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container-1">
-        <div class="header">
-            <h1>Gebrns</h1>
-            <nav class="home">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Project</a></li>
-                    <li><a href="#">About me</a></li>
-                </ul>
-            </nav>
-            
-            <button id="contactBtn">Contact me</button>     
-        </div>
+    <div class="container-header">
+        <nav>
+            <ul class="sidebar">
+            <li class="close-button" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+              <li><a  class="hideNav" href="#">Home</a></li>
+              <li><a  class="hideNav" href="#">Expertise</a></li>
+              <li><a  class="hideNav" href="#">About</a></li>
+              <li><a  class="hideNav" href="#">Contact me</a></li>
+            </ul>
+            <ul>
+                <li><a  href="#">Gebrns</a></li>
+                <li><a class="showNav" href="#">Home</a></li>
+                <li><a class="showNav" href="#">Expertise</a></li>
+                <li><a class="showNav" href="#">About</a></li>
+                <li><a class="showNav" href="#">Contact me</a></li>
+              <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+          </nav>
     </div>
 
-    <div class="container-2">
+    <!-- <div class="container-2">
+        <img class="introPhoto" src="img/photo p1.png" alt="" srcset="">
         <div class="introduction">
         <h4>Hello, I’m Gerald,<br></h4>
            <h2> I am a web developer<br> 
@@ -31,7 +37,6 @@
             engaging online experiences<br> 
             through code and creativity.</h2>
         </div>
-        <img class="introPhoto" src="img/photo p1.png" alt="" srcset="">
     </div>
 
     <div class="container-3">
@@ -65,12 +70,11 @@
         </div>
 
             <img class ="aboutPhoto" src="img/About photo canva pg 1.png" alt="" srcset="">
-
-
-    </div>
-
-   
-    
+    </div>  -->
     <script src="app.js"></script>
 </body>
 </html>
+
+<!-- make your card individually div in 1 container and make it 
+watch this for reference
+https://www.youtube.com/watch?v=9FNNkzPBFcE-->
