@@ -3,15 +3,27 @@
     padding: 0;
   }
   body{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.893);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
   }
   
+  /* header */
   nav{
     background-color: rgb(247, 247, 247);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     height: 10vh;
+    width: 100%;
   }
+
+  nav .logo{
+    font-weight: 600;
+    font-family: sans-serif;
+  }
+  nav .logo span{
+    color: burlywood;
+  }
+
   nav ul{
     width: 100%;
     list-style: none;
@@ -49,7 +61,7 @@
     right: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(4, 4, 4, 0.377);
+    background-color: rgba(4, 4, 4, 0.885);
     backdrop-filter: blur(12px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
@@ -59,7 +71,7 @@
     justify-content: center;
   }
   .sidebar li{
-    width: 100%;
+    width: 85px;
   }
   .sidebar a{
     position: relative;
@@ -106,24 +118,127 @@
   }
 
   @media(max-width: 800px){
+      .sidebar{
+        width: 100%;
+        z-index: 9999;
+        opacity: 90%;
+      }
+  
     .showNav{
       display: none;
+      
     }
     .menu-button{
       display: block;
+     
     }
     .close-button{
       position:absolute;
       margin:0; 
-
     }
+    .hideNav::after{
+      content: '';
+      height: 4px;
+      width: 0;
+      background: burlywood;
+      position: absolute;
+      left: 0;
+      bottom: -10px; 
+      transition: all .5s;
+    }
+    .hideNav:hover::after{
+      width: 100%;
+    }
+
+    .homePhoto{
+      position: absolute;
+      display: flex;
+      left: 230px;
+      top:50px;
+      height: 60vh;
+      width: 60vw;
+    }
+    .introduction{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 40vh
+    }
+ 
   }
   @media(max-width: 400px){
     .sidebar{
       width: 100%;
+      z-index: 9999;
+      opacity: 90%;
     }
     .sidebar .close-button{
       position: absolute;
       right: 30px;
     }
+    .hideNav::after{
+      content: '';
+      height: 4px;
+      width: 0;
+      background: burlywood;
+      position: absolute;
+      left: 0;
+      bottom: -10px; 
+      transition: all .5s;
+    }
+    .hideNav:hover::after{
+      width: 100%;
+    }
+    
+    .homePhoto{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 70px;
+      top:50px;
+      height: 60vh;
+      width: 70vw;
+    }
+    .introduction{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 40vh;
+      font-size: 13px;
+    }
+    h4{
+      text-align: none;
+    }
+  }
+
+  /* Home */
+  .container-home{
+    display: relative;
+    color: white;
+    max-width: 100%;
+   
+  }
+
+  .homePhoto{
+    /* position: absolute; */
+    float: right;
+    margin-top: 5vh;
+    margin-right: 5%;
+  }
+
+  .introduction{
+    position: relative;
+    top: 25vh;
+    left:10%;
+  }
+
+  h2{
+    position: relative;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    top:20px;
+    letter-spacing: 1px;
   }
