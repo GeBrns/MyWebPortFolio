@@ -117,128 +117,138 @@
     width: 100%;
   }
 
-  @media(max-width: 800px){
-      .sidebar{
-        width: 100%;
-        z-index: 9999;
-        opacity: 90%;
-      }
-  
-    .showNav{
-      display: none;
-      
-    }
-    .menu-button{
-      display: block;
-     
-    }
-    .close-button{
-      position:absolute;
-      margin:0; 
-    }
-    .hideNav::after{
-      content: '';
-      height: 4px;
-      width: 0;
-      background: burlywood;
-      position: absolute;
-      left: 0;
-      bottom: -10px; 
-      transition: all .5s;
-    }
-    .hideNav:hover::after{
-      width: 100%;
-    }
-
-    .homePhoto{
-      position: absolute;
-      display: flex;
-      left: 230px;
-      top:50px;
-      height: 60vh;
-      width: 60vw;
-    }
-    .introduction{
-      position: relative;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      margin-top: 40vh
-    }
- 
+  /* Home */
+  .container-home{
+    width: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-areas: 
+   "introduction homephoto";
+   color: white;
   }
-  @media(max-width: 400px){
+
+  .homePhoto{
+    grid-area: homephoto;
+    display: flex;
+    margin-top: 60px;
+  }
+
+  .introduction{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-area: introduction;
+    letter-spacing: 2px;
+    line-height: 2.5;
+    letter-spacing: 1px;
+    margin-top: 180px;
+    margin-right: 100px;
+  }
+
+  @media(max-width: 1080px){
     .sidebar{
       width: 100%;
       z-index: 9999;
       opacity: 90%;
     }
-    .sidebar .close-button{
-      position: absolute;
-      right: 30px;
-    }
-    .hideNav::after{
-      content: '';
-      height: 4px;
-      width: 0;
-      background: burlywood;
-      position: absolute;
-      left: 0;
-      bottom: -10px; 
-      transition: all .5s;
-    }
-    .hideNav:hover::after{
-      width: 100%;
-    }
+
+  .showNav{
+    display: none;
     
-    .homePhoto{
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      left: 70px;
-      top:50px;
-      height: 60vh;
-      width: 70vw;
-    }
-    .introduction{
-      position: relative;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      margin-top: 40vh;
-      font-size: 13px;
-    }
-    h4{
-      text-align: none;
-    }
+  }
+  .menu-button{
+    display: block;
+   
+  }
+  .close-button{
+    position:absolute;
+    margin:0; 
+  }
+  .hideNav::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background: burlywood;
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    transition: all .5s;
   }
 
-  /* Home */
+.hideNav:hover::after{
+    width: 100%;
+  }
+
+.container-home{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "homephoto"
+    "introduction";
+  }
+
+.homePhoto{
+    grid-area: homephoto;
+    display: flex;
+    justify-content: center; 
+  }
+
+.introduction{
+  grid-area: introduction;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px;
+  }
+}
+
+@media(max-width: 450px){
+
+  .sidebar{
+    width: 100%;
+    z-index: 9999;
+    opacity: 90%;
+  }
+  .sidebar .close-button{
+    position: absolute;
+    right: 30px;
+  }
+  .hideNav::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background: burlywood;
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    transition: all .5s;
+  }
+  .hideNav:hover::after{
+    width: 100%;
+  }
+  
   .container-home{
-    display: relative;
-    color: white;
-    max-width: 100%;
-   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "homephoto"
+    "introduction";
   }
 
   .homePhoto{
-    /* position: absolute; */
-    float: right;
-    margin-top: 5vh;
-    margin-right: 5%;
+    grid-area: homephoto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
   }
 
   .introduction{
-    position: relative;
-    top: 25vh;
-    left:10%;
+    grid-area: introduction;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
   }
-
-  h2{
-    position: relative;
-    letter-spacing: 2px;
-    line-height: 2.5;
-    top:20px;
-    letter-spacing: 1px;
-  }
+}
